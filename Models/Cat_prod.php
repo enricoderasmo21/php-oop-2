@@ -9,5 +9,13 @@ class Cat_prod extends Product{
         parent:: __construct($image, $brand, $type, $price, $description);
 
     }
+
+    function getIcon(){
+
+        if($this->category == 'Gatto'){
+
+            return '<i class="fa-solid fa-cat"></i>';
+        }
+    }
     
 }

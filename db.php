@@ -6,7 +6,7 @@ $croc_dog = new Dog_prod("./Img/croc_dog.jpg", "Oasy", "Crocchette", 16.50, "Cro
 $tin_dog = new Dog_prod("./Img/tin_dog.jpg", "Monge", "Cibo in scatola", 27.20, "Cibo umido con carne di vitello");
 $snack_dog = new Dog_prod("./Img/snack_dog.jpg", "BestBone", "Snack", 6.90, "Biscotti snack");
 
-$rope_dog = new Dog_prod("./Img/rope_dog.jpg", "Trixie", "Gioco", 4.50, "Corda per giocare");
+$rope_dog = new Dog_prod("./Img/rope_dog.webp", "Trixie", "Gioco", 4.50, "Corda per giocare");
 $ball_dog = new Dog_prod("./Img/ball_dog.jpg", "Fuxtreme", "Gioco", 5.00, "Palla da mordere");
 $kong_dog = new Dog_prod("./Img/kong_dog.jpg", "Kong", "Gioco", 20.90, "Gioco da mordere");
 
@@ -21,12 +21,12 @@ $tin_cat = new Cat_prod("./Img/tin_cat.jpg", "Trainer", "Cibo in scatola", 17.90
 $snack_cat = new Cat_prod("./Img/snack_cat.jpg", "Oasy", "Snack", 1.30, "Biscotti snack ripieni con salmone");
 
 $mouse_cat = new Cat_prod("./Img/mouse_cat.jpg", "Camon", "Gioco", 2.80, "Topo per giocare");
-$stick_cat = new Cat_prod("./Img/stick_cat.jpg", "Camon", "Gioco", 5.90, "Bastoncino per giocare");
+$stick_cat = new Cat_prod("./Img/stick_cat.webp", "Camon", "Gioco", 5.90, "Bastoncino per giocare");
 $scratch_cat = new Cat_prod("./Img/scratch_cat.jpg", "DMail", "Gioco", 39.90, "Tiragraffi a torre con cuccia");
 
 $pillow_cat = new Cat_prod("./Img/pillow_cat.jpg", "Vanansa", "Cuscino", 19.99, "Cuscino da interno");
-$house_cat = new Cat_prod("./Img/house_cat.jpg", "Pawhut", "Cuccia", 50.95, "Cuccia a forma di casa da interno");
-$litter_cat = new Cat_prod("./Img/litter_cat.jpg", "UNHO", "Lettiera", 50.08, "Lettiera per bisogni");
+$house_cat = new Cat_prod("./Img/house_cat.webp", "Pawhut", "Cuccia", 50.95, "Cuccia a forma di casa da interno");
+$litter_cat = new Cat_prod("./Img/litter_cat.webp", "UNHO", "Lettiera", 50.08, "Lettiera per bisogni");
 
 
 
@@ -48,7 +48,7 @@ $games = [
     $scratch_cat
 ];
 
-$relax = [
+$comforts = [
     $house_dog,
     $pillow_small_dog,
     $pillow_big_dog,
@@ -60,5 +60,5 @@ $relax = [
 $products = [
     $foods,
     $games,
-    $relax
+    $comforts
 ];

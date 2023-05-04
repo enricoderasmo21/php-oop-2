@@ -10,4 +10,12 @@ class Dog_prod extends Product{
 
     }
 
+    function getIcon(){
+
+        if($this->category == 'Cane'){
+
+            return '<i class="fa-solid fa-dog"></i>';
+        }
+    }
+
 }

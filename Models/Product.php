@@ -16,4 +16,8 @@ class Product {
         $this->price = $price;
         $this->description = $description;
     }
+
+    function getTwoDecimals() {
+        return number_format((float)$this->price, 2, '.', '');
+    }
 }
