@@ -54,7 +54,7 @@ require_once './db.php';
                         <li class="list-group-item"> <?= $food->getTwoDecimals() . '€' ?> </li>
                     </ul>
 
-                    <a href="#" class="btn btn-primary">Acquista</a>
+                    <a href="#" class="btn">Acquista</a>
                 </div>
             </div>
             <?php
@@ -82,7 +82,7 @@ require_once './db.php';
                         <li class="list-group-item"> <?= $game->getTwoDecimals() . '€' ?> </li>
                     </ul>
 
-                    <a href="#" class="btn btn-primary">Acquista</a>
+                    <a href="#" class="btn">Acquista</a>
                 </div>
             </div>
             <?php
@@ -110,7 +110,7 @@ require_once './db.php';
                         <li class="list-group-item"> <?= $comfort->getTwoDecimals() . '€' ?> </li>
                     </ul>
 
-                    <a href="#" class="btn btn-primary">Acquista</a>
+                    <a href="#" class="btn">Acquista</a>
                 </div>
             </div>
             <?php
