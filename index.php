@@ -1,9 +1,6 @@
 <?php 
 
-require_once './Models/Product.php';
-require_once './Models/Dog_prod.php';
-require_once './Models/Cat_prod.php';
-require_once './db.php';
+require_once 'db.php';
 
 ?>
 
@@ -34,80 +31,41 @@ require_once './db.php';
 
     <div id="container-centered">
 
-        <h2 class="subtitle">Cibo</h2>
-
         <div class="_container">
 
             <?php 
-            foreach($foods as $food){
+            foreach($products as $product){
             
             ?>
             <div class="card">
-                <img   src="<?= $food->image ?>" class="card-img-top" alt="image">
+                <img   src="<?= $product->image ?>" class="card-img-top" alt="image">
                 <div class="card-body">
 
-                    <h5 class="card-title"><?= $food->brand ?></h5>
+                    <h5 class="card-title"><?= $product->brand ?></h5>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"> <?= $food->type ?> </li>
-                        <li class="list-group-item"> <?= $food->getIcon() ?> </li>
-                        <li class="list-group-item"><?= $food->description ?> </li>
-                        <li class="list-group-item"> <?= $food->getTwoDecimals() . '€' ?> </li>
-                    </ul>
+                        <?php 
 
-                    <a href="#" class="btn">Acquista</a>
-                </div>
-            </div>
-            <?php
-            }
-            ?>
-        </div>
+                        switch(get_class($product)){
+                            
+                            case 'Food': ?> 
 
-        <h2 class="subtitle">Giochi</h2>
+                                <li> Ingredienti: <?= $product->ingredients; ?> </li> <?php
+                                break;
+                            
+                            case 'Game': ?>
 
-        <div class="_container">
-            
-            <?php 
-            foreach($games as $game){
-            
-            ?>
-            <div class="card">
-                <img   src="<?= $game->image ?>" class="card-img-top" alt="image">
-                <div class="card-body">
+                               <li> Peso: <?= $product->wheight . 'kg'; ?> </li> <?php 
+                                break;
 
-                    <h5 class="card-title"><?= $game->brand ?></h5>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"> <?= $game->type ?> </li>
-                        <li class="list-group-item"> <?= $game->getIcon() ?> </li>
-                        <li class="list-group-item"><?= $game->description ?> </li>
-                        <li class="list-group-item"> <?= $game->getTwoDecimals() . '€' ?> </li>
-                    </ul>
+                            case 'Comfort': ?>
 
-                    <a href="#" class="btn">Acquista</a>
-                </div>
-            </div>
-            <?php
-            }
-            ?>
-        </div>
-
-        <h2 class="subtitle">Relax</h2>
-        
-        <div class="_container">
-            
-            <?php 
-            foreach($comforts as $comfort){
-            
-            ?>
-            <div class="card">
-                <img   src="<?= $comfort->image ?>" class="card-img-top" alt="image">
-                <div class="card-body">
-
-                    <h5 class="card-title"><?= $comfort->brand ?></h5>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"> <?= $comfort->type ?> </li>
-                        <li class="list-group-item"> <?= $comfort->getIcon() ?> </li>
-                        <li class="list-group-item"><?= $comfort->description ?> </li>
-                        <li class="list-group-item"> <?= $comfort->getTwoDecimals() . '€' ?> </li>
+                               <li> Taglia: <?= $product->size; ?> </li> <?php
+                                break;
+                        }
+                        
+                        ?>
+                        <li class="list-group-item"><?= $product->category->icon?> </li>
+                        <li class="list-group-item"> <?= $product->getTwoDecimals() . '€' ?> </li>
                     </ul>
 
                     <a href="#" class="btn">Acquista</a>

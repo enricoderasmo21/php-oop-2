@@ -1,64 +1,61 @@
 <?php 
 
+require_once __DIR__ . '/Models/Product.php';
+require_once __DIR__ . '/Models/Food.php';
+require_once __DIR__ . '/Models/Game.php';
+require_once __DIR__ . '/Models/Comfort.php';
+
+$categories = [
+    new Category("Cane","<i class='fa-solid fa-dog'></i>"),
+    new Category("Gatto", "<i class='fa-solid fa-cat'></i>")
+];
+
 // Prodotti cane
 
-$croc_dog = new Dog_prod("./Img/croc_dog.jpg", "Oasy", "Crocchette", 16.50, "Crocchette con carne di maiale");
-$tin_dog = new Dog_prod("./Img/tin_dog.jpg", "Monge", "Cibo in scatola", 27.20, "Cibo umido con carne di vitello");
-$snack_dog = new Dog_prod("./Img/snack_dog.jpg", "BestBone", "Snack", 6.90, "Biscotti snack");
+$croc_dog = new Food("./Img/croc_dog.jpg", "Oasy", $categories[0], 16.50, "Carne di maiale");
+$tin_dog = new Food("./Img/tin_dog.jpg", "Monge", $categories[0], 27.20, "Carne di vitello");
+$snack_dog = new Food("./Img/snack_dog.jpg", "BestBone", $categories[0], 6.90, "Carne di pollo");
 
-$rope_dog = new Dog_prod("./Img/rope_dog.webp", "Trixie", "Gioco", 4.50, "Corda per giocare");
-$ball_dog = new Dog_prod("./Img/ball_dog.jpg", "Fuxtreme", "Gioco", 5.00, "Palla da mordere");
-$kong_dog = new Dog_prod("./Img/kong_dog.jpg", "Kong", "Gioco", 20.90, "Gioco da mordere");
+$rope_dog = new Game("./Img/rope_dog.webp", "Trixie", $categories[0], 4.50, 0.3);
+$ball_dog = new Game("./Img/ball_dog.jpg", "Fuxtreme", $categories[0],  5.00, 0.1);
+$kong_dog = new Game("./Img/kong_dog.jpg", "Kong", $categories[0], 20.90, 0.1);
 
-$house_dog = new Dog_prod("./Img/house_dog.jpg", "Cadoca", "Cuccia", 129.95, "Cuccia da esterno");
-$pillow_small_dog = new Dog_prod("./Img/pillow_small_dog.jpg", "JoeJoy", "Cuscino", 28.99, "Cuscino da interno per cani di taglia piccola");
-$pillow_big_dog = new Dog_prod("./Img/pillow_big_dog.jpg", "Bedsure", "Cuscino", 33.99, "Cuscino da interno per cani di taglia grande");
+$house_dog = new Comfort("./Img/house_dog.jpg", "Cadoca", $categories[0],  129.95, "L");
+$pillow_small_dog = new Comfort("./Img/pillow_small_dog.jpg",  "Trixie", $categories[0], 28.99, "S/M");
+$pillow_big_dog = new Comfort("./Img/pillow_big_dog.jpg",  "Fuxtream", $categories[0], 33.99, "L/XL");
 
 // Prodotti gatto
 
-$croc_cat = new Cat_prod("./Img/croc_cat.jpg", "Prolife", "Crocchette", 12.30, "Crocchette con carne di pollo e riso");
-$tin_cat = new Cat_prod("./Img/tin_cat.jpg", "Trainer", "Cibo in scatola", 17.90, "Cibo umido con carne di pollo e tacchino");
-$snack_cat = new Cat_prod("./Img/snack_cat.jpg", "Oasy", "Snack", 1.30, "Biscotti snack ripieni con salmone");
+$croc_cat = new Food("./Img/croc_cat.jpg", "Prolife", $categories[1],  12.30, "Carne di pollo e riso");
+$tin_cat = new Food("./Img/tin_cat.jpg", "Trainer", $categories[1], 17.90, "Carne di pollo e tacchino");
+$snack_cat = new Food("./Img/snack_cat.jpg", "Oasy",  $categories[1], 1.30, "Salmone");
 
-$mouse_cat = new Cat_prod("./Img/mouse_cat.jpg", "Camon", "Gioco", 2.80, "Topo per giocare");
-$stick_cat = new Cat_prod("./Img/stick_cat.webp", "Camon", "Gioco", 5.90, "Bastoncino per giocare");
-$scratch_cat = new Cat_prod("./Img/scratch_cat.jpg", "DMail", "Gioco", 39.90, "Tiragraffi a torre con cuccia");
+$mouse_cat = new Game("./Img/mouse_cat.jpg", "Camon", $categories[1],  2.80, 0.1);
+$stick_cat = new Game("./Img/stick_cat.webp", "Camon", $categories[1],  5.90, 0.1);
+$scratch_cat = new Game("./Img/scratch_cat.jpg", "DMail", $categories[1],  39.90, 3.8);
 
-$pillow_cat = new Cat_prod("./Img/pillow_cat.jpg", "Vanansa", "Cuscino", 19.99, "Cuscino da interno");
-$house_cat = new Cat_prod("./Img/house_cat.webp", "Pawhut", "Cuccia", 50.95, "Cuccia a forma di casa da interno");
-$litter_cat = new Cat_prod("./Img/litter_cat.webp", "UNHO", "Lettiera", 50.08, "Lettiera per bisogni");
+$pillow_cat = new Comfort("./Img/pillow_cat.jpg", "Vanansa", $categories[1],  19.99, "S");
+$house_cat = new Comfort("./Img/house_cat.webp", "Pawhut", $categories[1],  50.95, "M");
+$litter_cat = new Comfort("./Img/litter_cat.webp", "UNHO", $categories[1],  50.08, "All");
 
 
-
-$foods = [
+$products = [
     $croc_dog,
     $tin_dog,
     $snack_dog,
     $croc_cat,
     $tin_cat,
-    $snack_cat
-];
-
-$games = [
+    $snack_cat,
     $rope_dog,
     $ball_dog,
     $kong_dog,
     $mouse_cat,
     $stick_cat,
-    $scratch_cat
-];
-
-$comforts = [
+    $scratch_cat,
     $house_dog,
     $pillow_small_dog,
     $pillow_big_dog,
     $pillow_cat,
     $house_cat,
     $litter_cat
-];
-
-$products = [
-    $foods,
-    $games,
-    $comforts
 ];
