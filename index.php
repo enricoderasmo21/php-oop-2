@@ -49,12 +49,14 @@ require_once 'db.php';
                             
                             case 'Food': ?> 
 
-                                <li> Ingredienti: <?= $product->ingredients; ?> </li> <?php
+                                <li> Ingredienti: <?= $product->ingredients; ?> </li>
+                                <li>Voto: <?= $product->getRate() . '/5'; ?> </li> <?php
                                 break;
                             
                             case 'Game': ?>
 
-                               <li> Peso: <?= $product->wheight . 'kg'; ?> </li> <?php 
+                               <li> Peso: <?= $product->wheight . 'kg'; ?> </li>
+                               <li> Voto: <?= $product->getRate() . '/5'; ?> </li> <?php 
                                 break;
 
                             case 'Comfort': ?>

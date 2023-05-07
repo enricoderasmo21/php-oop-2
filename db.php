@@ -12,13 +12,13 @@ $categories = [
 
 // Prodotti cane
 
-$croc_dog = new Food("./Img/croc_dog.jpg", "Oasy", $categories[0], 16.50, "Carne di maiale");
-$tin_dog = new Food("./Img/tin_dog.jpg", "Monge", $categories[0], 27.20, "Carne di vitello");
-$snack_dog = new Food("./Img/snack_dog.jpg", "BestBone", $categories[0], 6.90, "Carne di pollo");
+$croc_dog = new Food("./Img/croc_dog.jpg", "Oasy", $categories[0], 16.50, "Carne di maiale", 4);
+$tin_dog = new Food("./Img/tin_dog.jpg", "Monge", $categories[0], 27.20, "Carne di vitello", 3);
+$snack_dog = new Food("./Img/snack_dog.jpg", "BestBone", $categories[0], 6.90, "Carne di pollo", 5);
 
-$rope_dog = new Game("./Img/rope_dog.webp", "Trixie", $categories[0], 4.50, 0.3);
-$ball_dog = new Game("./Img/ball_dog.jpg", "Fuxtreme", $categories[0],  5.00, 0.1);
-$kong_dog = new Game("./Img/kong_dog.jpg", "Kong", $categories[0], 20.90, 0.1);
+$rope_dog = new Game("./Img/rope_dog.webp", "Trixie", $categories[0], 4.50, 0.3, 2);
+$ball_dog = new Game("./Img/ball_dog.jpg", "Fuxtreme", $categories[0],  5.00, 0.1, 1);
+$kong_dog = new Game("./Img/kong_dog.jpg", "Kong", $categories[0], 20.90, 0.1, 4);
 
 $house_dog = new Comfort("./Img/house_dog.jpg", "Cadoca", $categories[0],  129.95, "L");
 $pillow_small_dog = new Comfort("./Img/pillow_small_dog.jpg",  "Trixie", $categories[0], 28.99, "S/M");
@@ -26,13 +26,13 @@ $pillow_big_dog = new Comfort("./Img/pillow_big_dog.jpg",  "Fuxtream", $categori
 
 // Prodotti gatto
 
-$croc_cat = new Food("./Img/croc_cat.jpg", "Prolife", $categories[1],  12.30, "Carne di pollo e riso");
-$tin_cat = new Food("./Img/tin_cat.jpg", "Trainer", $categories[1], 17.90, "Carne di pollo e tacchino");
-$snack_cat = new Food("./Img/snack_cat.jpg", "Oasy",  $categories[1], 1.30, "Salmone");
+$croc_cat = new Food("./Img/croc_cat.jpg", "Prolife", $categories[1],  12.30, "Carne di pollo e riso", 2);
+$tin_cat = new Food("./Img/tin_cat.jpg", "Trainer", $categories[1], 17.90, "Carne di pollo e tacchino", 3);
+$snack_cat = new Food("./Img/snack_cat.jpg", "Oasy",  $categories[1], 1.30, "Salmone", 4);
 
-$mouse_cat = new Game("./Img/mouse_cat.jpg", "Camon", $categories[1],  2.80, 0.1);
-$stick_cat = new Game("./Img/stick_cat.webp", "Camon", $categories[1],  5.90, 0.1);
-$scratch_cat = new Game("./Img/scratch_cat.jpg", "DMail", $categories[1],  39.90, 3.8);
+$mouse_cat = new Game("./Img/mouse_cat.jpg", "Camon", $categories[1],  2.80, 0.1, 1);
+$stick_cat = new Game("./Img/stick_cat.webp", "Camon", $categories[1],  5.90, 0.1, 2);
+$scratch_cat = new Game("./Img/scratch_cat.jpg", "DMail", $categories[1],  39.90, 3.8, 5);
 
 $pillow_cat = new Comfort("./Img/pillow_cat.jpg", "Vanansa", $categories[1],  19.99, "S");
 $house_cat = new Comfort("./Img/house_cat.webp", "Pawhut", $categories[1],  50.95, "M");
