@@ -50,13 +50,29 @@ require_once 'db.php';
                             case 'Food': ?> 
 
                                 <li> Ingredienti: <?= $product->ingredients; ?> </li>
-                                <li>Voto: <?= $product->getRate() . '/5'; ?> </li> <?php
+                                <li>Voto: <?php try {
+
+                                   echo $product->getRate() . '/5';
+                                    
+                                } catch (Exception $e) {
+
+                                    echo $e->getMessage();
+    
+                                } ?> </li> <?php
                                 break;
                             
                             case 'Game': ?>
 
                                <li> Peso: <?= $product->wheight . 'kg'; ?> </li>
-                               <li> Voto: <?= $product->getRate() . '/5'; ?> </li> <?php 
+                               <li> Voto: <?php try {
+
+                                echo $product->getRate() . '/5'; 
+
+                            } catch (Exception $e) {
+
+                                echo $e->getMessage();
+
+                            } ?> </li> <?php 
                                 break;
 
                             case 'Comfort': ?>
