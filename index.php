@@ -49,8 +49,8 @@ require_once 'db.php';
                             
                             case 'Food': ?> 
 
-                                <li> Ingredienti: <?= $product->ingredients; ?> </li>
-                                <li>Voto: <?php try {
+                                <li class="list-group-item"> Ingredienti: <?= $product->ingredients; ?> </li>
+                                <li class="list-group-item">Voto: <?php try {
 
                                    echo $product->getRate() . '/5';
                                     
@@ -63,8 +63,8 @@ require_once 'db.php';
                             
                             case 'Game': ?>
 
-                               <li> Peso: <?= $product->wheight . 'kg'; ?> </li>
-                               <li> Voto: <?php try {
+                               <li class="list-group-item"> Peso: <?= $product->wheight . 'kg'; ?> </li>
+                               <li class="list-group-item"> Voto: <?php try {
 
                                 echo $product->getRate() . '/5'; 
 
@@ -77,7 +77,7 @@ require_once 'db.php';
 
                             case 'Comfort': ?>
 
-                               <li> Taglia: <?= $product->size; ?> </li> <?php
+                               <li class="list-group-item"> Taglia: <?= $product->size; ?> </li> <?php
                                 break;
                         }
                         

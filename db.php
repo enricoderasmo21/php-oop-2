@@ -12,7 +12,7 @@ $categories = [
 
 // Prodotti cane
 
-$croc_dog = new Food("./Img/croc_dog.jpg", "Oasy", $categories[0], 16.50, "Carne di maiale", 8);
+$croc_dog = new Food("./Img/croc_dog.jpg", "Oasy", $categories[0], 16.50, "Carne di maiale", 4);
 $tin_dog = new Food("./Img/tin_dog.jpg", "Monge", $categories[0], 27.20, "Carne di vitello", 3);
 $snack_dog = new Food("./Img/snack_dog.jpg", "BestBone", $categories[0], 6.90, "Carne di pollo", 5);
 
